@@ -84,10 +84,8 @@ INSERT INTO conquista_jogador(id_jogador, id_conquista,  data_hora) VALUES
 	(1, 1, '2026-07-01 14:30:00');
 
 
-SELECT * FROM item;
 
-SELECT * FROM jogador;
 
-SELECT * FROM inventario;
+
     
 	

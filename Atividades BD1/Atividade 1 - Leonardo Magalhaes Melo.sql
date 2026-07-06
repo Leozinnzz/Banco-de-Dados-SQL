@@ -15,11 +15,10 @@ CREATE TABLE IF NOT EXISTS aeronave (
     matricula INT PRIMARY KEY, 
     modelo VARCHAR(60) NOT NULL, 
     fabricante VARCHAR(80) NOT NULL, 
-    capacity INT NOT NULL  
+    capacidade INT NOT NULL  
 ); 
 
 
-ALTER TABLE aeronave CHANGE COLUMN capacity capacidade INT NOT NULL;
 
 
 CREATE TABLE IF NOT EXISTS voo (
@@ -94,7 +93,7 @@ INSERT INTO aeroporto (codigo, nome, cidade, pais) VALUES
 (10, 'Aeroporto Internacional de Frankfurt', 'Frankfurt', 'Alemanha');
 
 INSERT INTO aeronave (matricula, modelo, fabricante, capacidade) VALUES
-(1010, 'A320neo', 'Airbus', 174),
+(1010, 'A320neo', 'Airbus', 200),
 (1020, '737 MAX 8', 'Boeing', 186),
 (1030, 'E195-E2', 'Embraer', 136),
 (1040, '787-9 Dreamliner', 'Boeing', 300),
@@ -297,3 +296,5 @@ FROM passageiro p
 JOIN bagagem b ON p.id_passageiro = b.id_passageiro
 GROUP BY p.id_passageiro, p.nome
 HAVING COUNT(b.codigo_etiqueta) >= 1;
+
+USE sistema_aeroportuario;
